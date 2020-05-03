@@ -1,6 +1,7 @@
 const express = require("express");
 const logger = require("morgan");
 const mongoose = require("mongoose");
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://agile-river-60957";
 
 const PORT = process.env.PORT || 3000;
 
@@ -13,7 +14,8 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/populatedb", { useNewUrlParser: true });
+mongoose.connect(MONGODB_URI);
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/agile-river-60957", { useNewUrlParser: true });
 
 // db.User.create({ name: "Ernest Hemingway" })
 //   .then(dbUser => {
