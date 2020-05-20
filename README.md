@@ -1,3 +1,3 @@
 # Fitness-Tracker
 ## Link
-agile-river-60957.herokuapp.com
+https://agile-river-60957.herokuapp.com
